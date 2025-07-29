@@ -13,12 +13,6 @@ const Prediction = () => {
     fluid_intake_last_24h: '',
     urine_frequency: '',
     urine_color_score: '',
-    ambient_temperature: '',
-    skin_temperature: '',
-    eda_skin_conductance: '',
-    heart_rate: '',
-    blood_pressure_systolic: '',
-    blood_pressure_diastolic: '',
     sleep_hours: ''
   });
 
@@ -52,13 +46,8 @@ const Prediction = () => {
         fluid_intake_last_24h: parseFloat(formData.fluid_intake_last_24h),
         urine_frequency: parseInt(formData.urine_frequency),
         urine_color_score: parseInt(formData.urine_color_score),
-        ambient_temperature: parseFloat(formData.ambient_temperature),
-        skin_temperature: parseFloat(formData.skin_temperature),
-        eda_skin_conductance: parseFloat(formData.eda_skin_conductance),
-        heart_rate: parseInt(formData.heart_rate),
-        blood_pressure_systolic: parseInt(formData.blood_pressure_systolic),
-        blood_pressure_diastolic: parseInt(formData.blood_pressure_diastolic),
         sleep_hours: parseFloat(formData.sleep_hours)
+        // The rest of the physiological data will be provided by sensors
       };
 
       // For demo purposes, we'll simulate the prediction
@@ -177,8 +166,8 @@ const Prediction = () => {
                 id="user_age"
                 value={formData.user_age}
                 onChange={handleChange}
-                min="1" 
-                max="120"
+                min="14" 
+                max="45"
                 required
               />
             </div>
@@ -291,99 +280,6 @@ const Prediction = () => {
             <FiThermometer style={{ verticalAlign: 'middle', marginRight: '0.5rem' }} />
             Physiological Data
           </h3>
-
-          <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="ambient_temperature">Ambient Temperature (°C)</label>
-              <input 
-                type="number" 
-                name="ambient_temperature" 
-                id="ambient_temperature"
-                value={formData.ambient_temperature}
-                onChange={handleChange}
-                min="-10" 
-                max="50"
-                step="0.1"
-                required
-              />
-            </div>
-            
-            <div className="form-group">
-              <label htmlFor="skin_temperature">Skin Temperature (°C)</label>
-              <input 
-                type="number" 
-                name="skin_temperature" 
-                id="skin_temperature"
-                value={formData.skin_temperature}
-                onChange={handleChange}
-                min="30" 
-                max="42"
-                step="0.1"
-                required
-              />
-            </div>
-          </div>
-
-          <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="eda_skin_conductance">EDA Skin Conductance (μS)</label>
-              <input 
-                type="number" 
-                name="eda_skin_conductance" 
-                id="eda_skin_conductance"
-                value={formData.eda_skin_conductance}
-                onChange={handleChange}
-                min="0" 
-                max="100"
-                step="0.1"
-                required
-              />
-            </div>
-            
-            <div className="form-group">
-              <label htmlFor="heart_rate">Heart Rate (bpm)</label>
-              <input 
-                type="number" 
-                name="heart_rate" 
-                id="heart_rate"
-                value={formData.heart_rate}
-                onChange={handleChange}
-                min="40" 
-                max="220"
-                required
-              />
-            </div>
-          </div>
-
-          <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="blood_pressure_systolic">Blood Pressure Systolic (mmHg)</label>
-              <input 
-                type="number" 
-                name="blood_pressure_systolic" 
-                id="blood_pressure_systolic"
-                value={formData.blood_pressure_systolic}
-                onChange={handleChange}
-                min="70" 
-                max="250"
-                required
-              />
-            </div>
-            
-            <div className="form-group">
-              <label htmlFor="blood_pressure_diastolic">Blood Pressure Diastolic (mmHg)</label>
-              <input 
-                type="number" 
-                name="blood_pressure_diastolic" 
-                id="blood_pressure_diastolic"
-                value={formData.blood_pressure_diastolic}
-                onChange={handleChange}
-                min="40" 
-                max="150"
-                required
-              />
-            </div>
-          </div>
 
           <div className="form-group">
             <label htmlFor="sleep_hours">Sleep Hours (last night)</label>

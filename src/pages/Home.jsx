@@ -9,7 +9,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <h1>HydroSense</h1>
-        <p>Advanced Hydration Detection System for Raspberry Pi 3</p>
+        <p>A Hydration Sensing Machine</p>
         <Link to="/prediction" className="btn btn-primary">
           Start Prediction
         </Link>
@@ -29,8 +29,8 @@ const Home = () => {
           <div className="feature-icon">
             <FiActivity />
           </div>
-          <h3>Biometric Analysis</h3>
-          <p>Analyze multiple biometric parameters including urine color, frequency, and physiological data.</p>
+          <h3>Bioimpedance analysis</h3>
+          <p>Analyze multiple  parameters like urine color and its frequency and other physiological data.</p>
         </div>
 
         <div className="feature-card">
@@ -38,7 +38,7 @@ const Home = () => {
             <FiTrendingUp />
           </div>
           <h3>Predictive Analytics</h3>
-          <p>Using XGBoost machine learning model with 95%+ accuracy for hydration classification.</p>
+          <p>Using XGBoost machine learning model for hydration classification.</p>
         </div>
 
         <div className="feature-card">
@@ -50,49 +50,22 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="card">
-        <h2 style={{ textAlign: 'center', marginBottom: '2rem', color: '#333' }}>
-          System Performance
-        </h2>
-        <div className="stats-grid">
-          <div className="stat-card">
-            <div className="stat-number">95%</div>
-            <div className="stat-label">Accuracy</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-number">3</div>
-            <div className="stat-label">Hydration Classes</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-number">15+</div>
-            <div className="stat-label">Input Parameters</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-number">24/7</div>
-            <div className="stat-label">Monitoring</div>
-          </div>
-        </div>
-      </section>
-
       {/* About Section */}
       <section className="card">
         <h2 style={{ color: '#333', marginBottom: '1rem' }}>About HydroSense</h2>
         <p style={{ lineHeight: '1.6', color: '#666', marginBottom: '1rem' }}>
-          HydroSense is an advanced hydration detection system designed specifically for Raspberry Pi 3. 
-          It uses machine learning algorithms to analyze multiple biometric parameters and provide accurate 
-          hydration status predictions.
+          HydroSense is an advanced hydration detection system. It uses Deep Learning Algorithm to analyze while considering multiple parameters and provide accurate hydration status.
         </p>
         <p style={{ lineHeight: '1.6', color: '#666', marginBottom: '1rem' }}>
-          The system analyzes factors including:
+          The system analyzes using factors:
         </p>
         <ul style={{ color: '#666', marginLeft: '2rem', lineHeight: '1.6' }}>
           <li>Urine color and frequency</li>
           <li>Fluid intake patterns</li>
-          <li>Body temperature and skin conductance</li>
+          <li>Body temperature </li>
+          <li>Skin conductance</li>
           <li>Physical activity levels</li>
           <li>Environmental conditions</li>
-          <li>Personal demographics</li>
         </ul>
       </section>
 
